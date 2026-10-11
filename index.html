@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Beakk and Brew | Artisan Roastery &amp; Pâtisserie</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%232c1810'/><text x='50%' y='55%' text-anchor='middle' fill='%23fff9ed' font-family='serif' font-size='38' font-weight='bold' dy='.3em'>BB</text></svg>">
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS v3 with plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- Tailwind Configuration verbatim from Stitch Design System -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed": "#ffdbce",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#504440",
+            "on-primary-fixed": "#2a170f",
+            "secondary-container": "#f8e28a",
+            "on-secondary-fixed-variant": "#534600",
+            "inverse-surface": "#35301c",
+            "inverse-on-surface": "#faf0d2",
+            "surface-container-low": "#fdf3d4",
+            "primary": "#090100",
+            "on-primary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "background": "#fff9ed",
+            "error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#d4c880",
+            "on-secondary-container": "#736419",
+            "secondary-fixed-dim": "#dbc671",
+            "surface-container-high": "#f2e8c9",
+            "tertiary": "#685f23",
+            "on-primary-fixed-variant": "#5a4137",
+            "surface-tint": "#74584e",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#f8e28a",
+            "on-tertiary-fixed-variant": "#4f470c",
+            "on-surface": "#201c09",
+            "primary-fixed-dim": "#e3bfb2",
+            "inverse-primary": "#e3bfb2",
+            "outline-variant": "#d3c3be",
+            "surface-bright": "#fff9ed",
+            "secondary": "#6d5e13",
+            "primary-container": "#2c1810",
+            "error": "#ba1a1a",
+            "surface": "#fff9ed",
+            "tertiary-container": "#b8ac68",
+            "tertiary-fixed": "#f1e49a",
+            "surface-variant": "#ece2c4",
+            "on-error": "#ffffff",
+            "surface-container-highest": "#ece2c4",
+            "surface-container": "#f7eecf",
+            "on-error-container": "#93000a",
+            "on-tertiary-container": "#484005",
+            "on-tertiary-fixed": "#201c00",
+            "on-background": "#201c09",
+            "on-primary-container": "#9e7e73",
+            "outline": "#827470",
+            "on-secondary-fixed": "#221b00",
+            "surface-dim": "#e3dabc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline-md": ["Playfair Display", "serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "title-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Playfair Display", "serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "display": ["Playfair Display", "serif"],
+            "display-mobile": ["Playfair Display", "serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "title-lg": ["Playfair Display", "serif"],
+            "headline-lg": ["Playfair Display", "serif"],
+            "label-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg-mobile": ["Playfair Display", "serif"]
+          },
+          "fontSize": {
+            "headline-md": ["1.875rem", { lineHeight: "2.375rem", fontWeight: "500" }],
+            "label-sm": ["0.6875rem", { lineHeight: "0.875rem", letterSpacing: "0.08em", fontWeight: "500" }],
+            "body-lg": ["1.125rem", { lineHeight: "1.75rem", fontWeight: "400" }],
+            "body-md": ["0.9375rem", { lineHeight: "1.5rem", fontWeight: "400" }],
+            "title-md": ["1rem", { lineHeight: "1.5rem", fontWeight: "600" }],
+            "headline-sm": ["1.375rem", { lineHeight: "1.75rem", fontWeight: "500" }],
+            "body-sm": ["0.8125rem", { lineHeight: "1.25rem", fontWeight: "400" }],
+            "display": ["3.5rem", { lineHeight: "4rem", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "display-mobile": ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "label-md": ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.06em", fontWeight: "600" }],
+            "title-lg": ["1.125rem", { lineHeight: "1.5rem", fontWeight: "600" }],
+            "headline-lg": ["2.5rem", { lineHeight: "3rem", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "label-lg": ["0.875rem", { lineHeight: "1.25rem", letterSpacing: "0.04em", fontWeight: "600" }],
+            "headline-lg-mobile": ["1.75rem", { lineHeight: "2.25rem", letterSpacing: "-0.01em", fontWeight: "600" }]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 4px;
+      width: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #f7eecf;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #dbc671;
+      border-radius: 9999px;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Floating keyframes */
+    @keyframes floatGentle {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(6px); }
+    }
+    @keyframes fadeInSlide {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-float {
+      animation: floatGentle 4.5s ease-in-out infinite;
+    }
+    .animate-float-slow {
+      animation: floatSlow 5.5s ease-in-out infinite;
+    }
+    .animate-fade-in {
+      animation: fadeInSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Dynamic Nav Link Styling & Hover effect */
+    .nav-link {
+      position: relative;
+      color: #504440;
+      transition: color 0.25s ease-in-out;
+      padding-bottom: 6px;
+      display: inline-block;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #090100;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-link:hover {
+      color: #090100;
+    }
+    .nav-link:hover::after {
+      transform: scaleX(0.45);
+    }
+    .nav-link.active {
+      color: #090100;
+      font-weight: 600;
+    }
+    .nav-link.active::after {
+      transform: scaleX(1);
+    }
+
+    /* Mobile Nav Link */
+    .mobile-nav-link {
+      transition: all 0.2s ease;
+    }
+    .mobile-nav-link.active {
+      color: #090100;
+      font-weight: 600;
+      background-color: #f7eecf;
+    }
+
+    /* Card glow and hover physics */
+    .premium-card {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .premium-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px -8px rgba(44, 24, 16, 0.12), 0 4px 8px -2px rgba(44, 24, 16, 0.04);
+    }
+
+    /* Image zoom on hover */
+    .img-zoom {
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover .img-zoom {
+      transform: scale(1.05);
+    }
+
+    /* Backdrop blur fallback */
+    .glass-nav {
+      background-color: rgba(255, 249, 237, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary-fixed selection:text-primary-container">
+
+  <!-- 1. NAVBAR -->
+  <header id="main-header" class="docked full-width top-0 sticky z-50 glass-nav border-b border-outline-variant/20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-10 flex justify-between items-center h-20">
+      
+      <!-- Brand Logo Anchor -->
+      <a class="flex items-center gap-3 group" href="#" aria-label="Beakk and Brew Home">
+        <span class="w-10 h-10 rounded-full bg-primary-container text-surface flex items-center justify-center text-sm font-headline-sm font-semibold tracking-tighter shadow-sm group-hover:scale-105 group-hover:bg-primary transition-all duration-300">
+          BB
+        </span>
+        <div class="flex flex-col">
+          <span class="text-xl sm:text-headline-md font-headline-md font-medium tracking-tight text-primary transition-colors group-hover:text-primary-container">
+            Beakk and Brew
+          </span>
+          <span class="font-label-sm text-[10px] sm:text-label-sm uppercase tracking-widest text-outline -mt-1 block">
+            Roastery &amp; Pâtisserie
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (with dynamic active underline & hover) -->
+      <nav id="desktop-nav" class="hidden lg:flex items-center space-x-8 font-label-lg text-label-lg" aria-label="Main Navigation">
+        <a class="nav-link" href="#story">Story</a>
+        <a class="nav-link" href="#featured">Offerings</a>
+        <a class="nav-link" href="#menu">Menu</a>
+        <a class="nav-link" href="#gallery">Gallery</a>
+        <a class="nav-link" href="#reviews">Reviews</a>
+        <a class="nav-link" href="#visit">Visit</a>
+      </nav>
+
+      <!-- Trailing Action Cluster -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <!-- Shopping Cart Icon with Count -->
+        <button id="cart-toggle-btn" aria-label="View Shopping Cart" class="p-2.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container active:scale-95 transition-all duration-200 relative">
+          <span class="material-symbols-outlined text-2xl" data-icon="shopping_bag">shopping_bag</span>
+          <span id="cart-badge" class="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-background"></span>
+        </button>
+
+        <!-- Reserve Table CTA Button -->
+        <a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-primary-container text-surface hover:bg-primary font-label-lg text-label-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 hover:-translate-y-0.5" href="#reserve">
+          Reserve Table
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" aria-label="Open Navigation Menu" aria-expanded="false" class="lg:hidden p-2 rounded-lg text-primary hover:bg-surface-container active:scale-95 transition-all duration-200">
+          <span id="mobile-icon" class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-nav" class="hidden lg:hidden bg-surface-container-lowest/98 backdrop-blur-md border-b border-outline-variant/30 px-6 py-6 transition-all duration-300">
+      <div id="mobile-nav-links" class="flex flex-col space-y-3 font-label-lg text-label-lg">
+        <a class="mobile-nav-link text-on-surface-variant hover:text-primary py-2 px-3 rounded-lg hover:bg-surface-container transition-colors" href="#story">Story</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-primary py-2 px-3 rounded-lg hover:bg-surface-container transition-colors" href="#featured">Offerings</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-primary py-2 px-3 rounded-lg hover:bg-surface-container transition-colors" href="#menu">Menu</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-primary py-2 px-3 rounded-lg hover:bg-surface-container transition-colors" href="#gallery">Gallery</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-primary py-2 px-3 rounded-lg hover:bg-surface-container transition-colors" href="#reviews">Reviews</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-primary py-2 px-3 rounded-lg hover:bg-surface-container transition-colors" href="#visit">Visit</a>
+        <a class="inline-block text-center mt-3 py-3 rounded-lg bg-primary-container text-surface hover:bg-primary font-label-lg shadow-sm" href="#reserve">
+          Reserve Table
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section class="relative overflow-hidden pt-8 pb-16 md:py-24 bg-surface">
+    <!-- Atmospheric subtle ambient aura -->
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary-fixed/25 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-20 w-80 h-80 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        
+        <!-- Hero Text Column -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container border border-outline-variant/40 shadow-xs">
+            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            <span class="font-label-sm text-[11px] sm:text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Single Origin Micro-Lot Roastery</span>
+          </div>
+
+          <h1 class="font-headline-lg-mobile md:font-display text-3xl sm:text-4xl md:text-display text-primary leading-tight">
+            Sweet Moments Start Here.
+            <span class="block italic font-normal text-outline mt-1">Handcrafted Coffee &amp; Viennoiserie.</span>
+          </h1>
+
+          <p class="font-body-lg text-body-md sm:text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            Savor the delicate balance of high-altitude beans roasted on-site and Parisian lamination crafted with pure Normandy butter. A sensory haven designed for measured mornings and slow afternoons.
+          </p>
+
+          <!-- Dual CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a class="px-8 py-3.5 rounded-lg bg-primary-container text-surface hover:bg-primary transition-all duration-200 font-label-lg text-label-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-95 inline-flex items-center gap-2 group" href="#menu">
+              <span>Explore Menu</span>
+              <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+            </a>
+            <a class="px-7 py-3.5 rounded-lg bg-surface border border-primary-container/20 text-primary-container hover:bg-secondary-fixed/20 transition-all duration-200 font-label-lg text-label-lg hover:-translate-y-0.5 active:scale-95" href="#reserve">
+              Reserve Table
+            </a>
+          </div>
+
+          <!-- Feature Quick Stats / Badges -->
+          <div class="pt-8 border-t border-outline-variant/30 grid grid-cols-3 gap-3 sm:gap-4">
+            <div class="space-y-1">
+              <span class="font-label-sm text-[10px] sm:text-label-sm uppercase text-outline font-semibold tracking-wider">Provenance</span>
+              <p class="font-title-md text-base sm:text-title-md text-primary font-semibold">100% Arabica</p>
+              <p class="font-body-sm text-xs sm:text-body-sm text-on-surface-variant">Direct Trade Sourced</p>
+            </div>
+            <div class="space-y-1">
+              <span class="font-label-sm text-[10px] sm:text-label-sm uppercase text-outline font-semibold tracking-wider">Pâtisserie</span>
+              <p class="font-title-md text-base sm:text-title-md text-primary font-semibold">Baked Daily</p>
+              <p class="font-body-sm text-xs sm:text-body-sm text-on-surface-variant">Pure Charentes Butter</p>
+            </div>
+            <div class="space-y-1">
+              <span class="font-label-sm text-[10px] sm:text-label-sm uppercase text-outline font-semibold tracking-wider">Daily Ritual</span>
+              <p class="font-title-md text-base sm:text-title-md text-primary font-semibold">7:00 AM</p>
+              <p class="font-body-sm text-xs sm:text-body-sm text-on-surface-variant">Open Every Morning</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Column with floating badges -->
+        <div class="lg:col-span-6 relative mt-4 lg:mt-0">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Main Hero Image Container -->
+            <div class="relative aspect-[4/5] rounded-2xl md:rounded-3xl overflow-hidden bg-surface-container-high shadow-xl border border-outline-variant/30 group">
+              <img 
+                class="w-full h-full object-cover img-zoom" 
+                alt="Exquisite specialty espresso in porcelain cup alongside raspberry layered pastry" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLvqNfAaZnXA8brBnj_FtRHbFSXI2LADXYkd0Q1EOpPtn8GjnULpikg1-r9T4bO-blcD1FNtUAI154qiYgphDUXLVLsOmP557_YoNqBO-scYdnd9BJEpG0ihJ7ck-DZhQwGCien7cVQti8MXpSsixRXJTITPKypF5172D0w2w5Fk3NHLO3rX2-0ZOQVWAeBvUyX7K4R2AtcQoI0-ak9uBEj7l6TE-MhTXhYoEW_os1EZwdaq8AL9pl0w"
+                loading="eager"
+              />
+              <!-- Subtle gradient overlay at bottom -->
+              <div class="absolute inset-0 bg-gradient-to-t from-primary-container/40 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+
+            <!-- Floating Badge 1: Top Left -->
+            <div class="absolute -top-3 -left-2 sm:-left-6 bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant/40 rounded-xl p-3 sm:p-3.5 shadow-lg flex items-center gap-3 animate-float">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-primary-container shrink-0">
+                <span class="material-symbols-outlined text-lg sm:text-xl" data-icon="local_cafe">local_cafe</span>
+              </div>
+              <div>
+                <p class="font-label-sm text-[10px] sm:text-label-sm uppercase text-outline font-semibold tracking-wider">Single Origin Roast</p>
+                <p class="font-title-md text-xs sm:text-title-md text-primary font-bold">Ethiopian Yirgacheffe G1</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: Bottom Right -->
+            <div class="absolute -bottom-5 -right-2 sm:-right-5 bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant/40 rounded-xl p-3 sm:p-4 shadow-lg flex items-center gap-3 sm:gap-3.5 animate-float-slow">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-primary-container text-surface flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-xl sm:text-2xl" data-icon="award_star">award_star</span>
+              </div>
+              <div>
+                <p class="font-label-sm text-[10px] sm:text-label-sm uppercase text-outline font-semibold tracking-wider">Guild Recognition</p>
+                <p class="font-title-md text-xs sm:text-title-md text-primary font-bold">Baker of the Year 2024</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ABOUT / CAFÉ STORY -->
+  <section class="py-20 md:py-28 bg-surface-container-low border-y border-outline-variant/30" id="story">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-10">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Artisanal Provenance &amp; Ethos</span>
+        <h2 class="font-headline-lg-mobile md:font-headline-lg text-2xl sm:text-3xl md:text-headline-lg text-primary">
+          The Art of Slow Extraction &amp; Daily Craft
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Founded in 2018, Beakk and Brew bridges the disciplined alchemy of third-wave Nordic roasting with the delicate traditions of classic French viennoiserie.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Story Column 1: Sourcing & Roasting -->
+        <div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/30 shadow-sm flex flex-col justify-between premium-card group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-surface transition-colors duration-300">
+              <span class="material-symbols-outlined text-2xl" data-icon="filter_vintage">filter_vintage</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">High-Altitude Ethics</h3>
+            <p class="font-body-md text-body-sm sm:text-body-md text-on-surface-variant leading-relaxed">
+              We deal exclusively with smallholder cooperatives across Huehuetenango, Sidama, and Nariño, paying an average of 45% above Fair Trade baselines. Every green bean is grown over 1,800 meters, ensuring dense bean density and vibrant natural sweetness.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-sm text-label-sm">
+            <span>Direct Trade Audited</span>
+            <span class="font-bold text-primary">EST. 2018</span>
+          </div>
+        </div>
+
+        <!-- Story Column 2: The Cast-Iron Drum -->
+        <div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/30 shadow-sm flex flex-col justify-between premium-card group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-surface transition-colors duration-300">
+              <span class="material-symbols-outlined text-2xl" data-icon="fireplace">fireplace</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Measured Heat Profiles</h3>
+            <p class="font-body-md text-body-sm sm:text-body-md text-on-surface-variant leading-relaxed">
+              Our master roasters roast in micro-batches of 12kg inside a customized vintage Giesen drum. Using sensory intuition and continuous airflow mapping, we preserve delicate florals, crisp stone fruit acids, and rich caramelized cacao undertones.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-sm text-label-sm">
+            <span>Nordic-Light Spectrum</span>
+            <span class="font-bold text-primary">BATCH ROASTED</span>
+          </div>
+        </div>
+
+        <!-- Story Column 3: The Viennoiserie Ritual -->
+        <div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/30 shadow-sm flex flex-col justify-between premium-card group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-surface transition-colors duration-300">
+              <span class="material-symbols-outlined text-2xl" data-icon="bakery_dining">bakery_dining</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Lamination &amp; Ferment</h3>
+            <p class="font-body-md text-body-sm sm:text-body-md text-on-surface-variant leading-relaxed">
+              Each croissant undergoes a disciplined 72-hour cold fermentation and folding cycle. We use 84% butterfat AOP Charentes-Poitou dry butter, yielding an impossibly gossamer honeycomb crumb that shatters upon first bite.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-sm text-label-sm">
+            <span>72-Hour Fermentation</span>
+            <span class="font-bold text-primary">100% HOUSE-MADE</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Roaster Quote Banner -->
+      <div class="mt-12 bg-primary-container text-surface rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md border border-outline-variant/20">
+        <div class="space-y-2 text-center md:text-left">
+          <p class="font-headline-sm text-base sm:text-headline-sm italic text-secondary-fixed leading-relaxed">
+            "Coffee is not merely an extraction of soluble solids—it is a daily communion between soil, flame, and stillness."
+          </p>
+          <p class="font-label-sm text-xs sm:text-label-sm text-surface/70 uppercase tracking-widest pt-1">
+            — Éléonore Vance, Head Roaster &amp; Co-Founder
+          </p>
+        </div>
+        <a class="shrink-0 px-6 py-3 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg hover:bg-surface-container-low transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-95" href="#visit">
+          Book Roastery Tasting
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. FEATURED MENU ITEMS -->
+  <section class="py-20 md:py-28 bg-surface" id="featured">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-10">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Curated Signatures</span>
+          <h2 class="font-headline-lg-mobile md:font-headline-lg text-2xl sm:text-3xl md:text-headline-lg text-primary mt-1">
+            Featured Creations
+          </h2>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          A rotating quarterly selection marrying innovative botanical infusions with traditional pâtisserie mastery.
+        </p>
+      </div>
+
+      <!-- Grid of 4 Spotlight Items with delicate aesthetic inspired by screenshot -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Honeycomb Latte -->
+        <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all duration-300 hover:shadow-lg flex flex-col justify-between premium-card">
+          <div class="p-4 bg-surface-container/30 relative">
+            <div class="aspect-square rounded-xl overflow-hidden bg-surface-container-high relative">
+              <img 
+                class="w-full h-full object-cover img-zoom" 
+                alt="Artisan golden honeycomb latte with caramel drizzle in ceramic cup" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_UvoE5jgavJ1ofoeBpzfA5ToWtuHHoYpv1T2DeFLr8IExs7EGEMb0CbTWam61Hprzk5it7EdlV-2OwWE7rdKMpu-TAws6y6oTNKFzO-4AfJfzTWKb67s4ffwQxXQp5Udtkwd2IL0mZwf6ic0KbRNW7AeBnnINMdxgULaC5QbAmTb4oS2S7tVI3TiGO2F_HS_Id7GYztv70y2_Ro_LBWvP0zZNUKs-yw6ys3ZwoIBy6MIXCbCUMSLaOg"
+                loading="lazy"
+              />
+              <span class="absolute top-3 right-3 font-label-sm text-[10px] uppercase tracking-wider bg-surface/95 backdrop-blur-sm text-primary font-semibold px-2.5 py-1 rounded-full border border-outline-variant/30 shadow-xs">
+                Signature
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-baseline justify-between">
+                <h3 class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors">Golden Honeycomb Latte</h3>
+                <span class="font-title-md text-title-md font-bold text-primary ml-2">$6.50</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Double ristretto, velvety steamed oat milk, smoked raw mountain honey, and house-made crunchy honeycomb brittle.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+              <span class="font-label-sm text-[11px] text-outline">Notes: Amber, Molasses, Toast</span>
+              <button 
+                class="quick-add-btn w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-surface active:scale-90 transition-all duration-200" 
+                title="Add Golden Honeycomb Latte to tray"
+                data-name="Golden Honeycomb Latte"
+                data-price="6.50"
+              >
+                <span class="material-symbols-outlined text-base" data-icon="add">add</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Chocolate Babka -->
+        <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all duration-300 hover:shadow-lg flex flex-col justify-between premium-card">
+          <div class="p-4 bg-surface-container/30 relative">
+            <div class="aspect-square rounded-xl overflow-hidden bg-surface-container-high relative">
+              <img 
+                class="w-full h-full object-cover img-zoom" 
+                alt="Slice of Valrhona chocolate babka with dark fudge swirls" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIStUOKSShZAWkDRfzBl3HNRbrVdY4H5BOQvBkyuKQX5oKrzbOv98PXlKKqAaUsM7NTF6CaLQmqRpCmbI2IaNgOICNHhn9UMO316hCA2eo_v36MT2c7mTyDmbzv7Ymg2lxoHoKj8bdiieZMP4jGD50c92vvADLOJF8WKUJr8ZATJo26mB13YPKxDYd_Po0SNyCKzX1QFSjW8wxhezWvmVziogR_txJyXrtrs_loIfWkWDmqC643ca2MQ"
+                loading="lazy"
+              />
+              <span class="absolute top-3 right-3 font-label-sm text-[10px] uppercase tracking-wider bg-surface/95 backdrop-blur-sm text-primary font-semibold px-2.5 py-1 rounded-full border border-outline-variant/30 shadow-xs">
+                Viennoiserie
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-baseline justify-between">
+                <h3 class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors">Valrhona Chocolate Babka</h3>
+                <span class="font-title-md text-title-md font-bold text-primary ml-2">$5.75</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Rich brioche dough swirled generously with 70% Guanaja single-cru chocolate, roasted Piedmont hazelnuts, and vanilla bean syrup glaze.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+              <span class="font-label-sm text-[11px] text-outline">Notes: Bittersweet, Hazelnut, Cocoa</span>
+              <button 
+                class="quick-add-btn w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-surface active:scale-90 transition-all duration-200" 
+                title="Add Valrhona Chocolate Babka to tray"
+                data-name="Valrhona Chocolate Babka"
+                data-price="5.75"
+              >
+                <span class="material-symbols-outlined text-base" data-icon="add">add</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Cardamom Rose Cappuccino -->
+        <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all duration-300 hover:shadow-lg flex flex-col justify-between premium-card">
+          <div class="p-4 bg-surface-container/30 relative">
+            <div class="aspect-square rounded-xl overflow-hidden bg-surface-container-high relative">
+              <img 
+                class="w-full h-full object-cover img-zoom" 
+                alt="Cardamom Rose Cappuccino in earthenware mug garnished with dried rose petals" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3oVASczXNj6CT1rk2vGyzW848RW5MJ26oo8X3uH-18TNg-dyZ2Pxwgux7dZvRdhUm58nym7VwKacO5X84kE33X42EGZZVNM8NZbN0lFb2lSdI-teHz99yrmk6dZ5oapp32yMouvaHFOdvPiHoxw-bJvp6cLmDP7CQCkjdJpIOJ0-R6nLRoy3u3uBUJGWX2IVz9YnbpT-GnW5oYxxixPN2FNasePBC09SoR0j85WidSEQBMCtz-T94IQ"
+                loading="lazy"
+              />
+              <span class="absolute top-3 right-3 font-label-sm text-[10px] uppercase tracking-wider bg-surface/95 backdrop-blur-sm text-primary font-semibold px-2.5 py-1 rounded-full border border-outline-variant/30 shadow-xs">
+                Botanical
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-baseline justify-between">
+                <h3 class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors">Cardamom Rose Cappuccino</h3>
+                <span class="font-title-md text-title-md font-bold text-primary ml-2">$6.25</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Guatemalan espresso, gently infused green cardamom seed decoction, velvety steamed whole milk, and organic Damascus rose petals.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+              <span class="font-label-sm text-[11px] text-outline">Notes: Floral, Citrus Spice, Cream</span>
+              <button 
+                class="quick-add-btn w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-surface active:scale-90 transition-all duration-200" 
+                title="Add Cardamom Rose Cappuccino to tray"
+                data-name="Cardamom Rose Cappuccino"
+                data-price="6.25"
+              >
+                <span class="material-symbols-outlined text-base" data-icon="add">add</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Pistachio Berry Croissant -->
+        <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant/30 hover:border-secondary transition-all duration-300 hover:shadow-lg flex flex-col justify-between premium-card">
+          <div class="p-4 bg-surface-container/30 relative">
+            <div class="aspect-square rounded-xl overflow-hidden bg-surface-container-high relative">
+              <img 
+                class="w-full h-full object-cover img-zoom" 
+                alt="Twice-baked pistachio raspberry croissant with green frangipane" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzNauRYlTUuL-6T8kqwwHn9Jigy_QFt_ZuhcGlKkEobRmx6KnxKJVEyZhiI5qzf75qiru96c4Sc6o0Ez_03u5ju0VzgKnUEsmfHAAmVvkz6kj9LpAqmVTZe5JWr9o1dVTHmdzK6IkmgL-hhu_9rNjhdFX-PJiD18M6zWSN-mtGcVgSDwtWQTTXHVVNoGpQr1h2W39mrhOWGvBELD0YQpxXXzQByh9-s44mnLoD9GhqudUfY4m1a-mhCw"
+                loading="lazy"
+              />
+              <span class="absolute top-3 right-3 font-label-sm text-[10px] uppercase tracking-wider bg-surface/95 backdrop-blur-sm text-primary font-semibold px-2.5 py-1 rounded-full border border-outline-variant/30 shadow-xs">
+                Chef Choice
+              </span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-baseline justify-between">
+                <h3 class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors">Pistachio Berry Croissant</h3>
+                <span class="font-title-md text-title-md font-bold text-primary ml-2">$6.90</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Twice-baked butter croissant generously filled with Sicilian Bronte pistachio frangipane cream and tart red raspberry compote.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+              <span class="font-label-sm text-[11px] text-outline">Notes: Nutty, Tart Berry, Butter</span>
+              <button 
+                class="quick-add-btn w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-surface active:scale-90 transition-all duration-200" 
+                title="Add Pistachio Berry Croissant to tray"
+                data-name="Pistachio Berry Croissant"
+                data-price="6.90"
+              >
+                <span class="material-symbols-outlined text-base" data-icon="add">add</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FULL MENU (WITH INTERACTIVE TABS) -->
+  <section class="py-20 md:py-28 bg-surface-container-low" id="menu">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-10">
+      
+      <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Tasting Carte</span>
+        <h2 class="font-headline-lg-mobile md:font-headline-lg text-2xl sm:text-3xl md:text-headline-lg text-primary">
+          The Full Beakk and Brew Menu
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          Extracted to order with micro-adjusted brew ratios and fresh seasonal ingredients.
+        </p>
+      </div>
+
+      <!-- Menu Category Filter Tabs -->
+      <div class="flex items-center justify-start md:justify-center overflow-x-auto gap-3 pb-4 mb-12 custom-scroll no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0">
+        <button 
+          class="menu-tab-btn px-6 py-2.5 rounded-full font-label-lg text-label-lg whitespace-nowrap bg-primary-container text-surface transition-all duration-200 shadow-sm active:scale-95" 
+          onclick="switchMenu('espresso', this)"
+        >
+          Specialty Espresso &amp; Pour Over
+        </button>
+        <button 
+          class="menu-tab-btn px-6 py-2.5 rounded-full font-label-lg text-label-lg whitespace-nowrap bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-primary transition-all duration-200 active:scale-95" 
+          onclick="switchMenu('coldbrew', this)"
+        >
+          Cold Brew &amp; Signatures
+        </button>
+        <button 
+          class="menu-tab-btn px-6 py-2.5 rounded-full font-label-lg text-label-lg whitespace-nowrap bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-primary transition-all duration-200 active:scale-95" 
+          onclick="switchMenu('tea', this)"
+        >
+          Artisan Loose-Leaf Teas
+        </button>
+        <button 
+          class="menu-tab-btn px-6 py-2.5 rounded-full font-label-lg text-label-lg whitespace-nowrap bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-primary transition-all duration-200 active:scale-95" 
+          onclick="switchMenu('bakery', this)"
+        >
+          Fresh Bakery &amp; Brunch
+        </button>
+      </div>
+
+      <!-- Category 1: Espresso & Pour Over -->
+      <div class="menu-content grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 animate-fade-in" id="category-espresso">
+        
+        <!-- Item 1 -->
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Single Origin V60 Pour Over</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$6.00</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Yirgacheffe Gedeb, washed process. Notes of fragrant jasmine blossom, bergamot citrus, and sweet Meyer lemon curd.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-secondary-fixed/50 text-on-secondary-fixed-variant">ROASTER'S PICK</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">ORGANIC</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Cortado 'Beakk &amp; Brew' 1:1</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$4.75</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Equal parts double espresso and silky micro-foamed organic whole milk. Notes of warm toasted pecan and molasses.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">CLASSIC</span>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Geisha Natural Reserve Chemex</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$12.50</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Panama Boquete Hacienda La Esmeralda. Intensely aromatic with white peach, wild strawberry, and raw honey finish.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-secondary-fixed/50 text-on-secondary-fixed-variant">MICRO-LOT</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">LIMITED CROP</span>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Flat White with Oat Cream</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$5.50</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Espresso pulled short with velvety steamed Minor Figures oat milk, presenting deep notes of cacao nibs and toasted caramel.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">VEGAN</span>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Doppio Espresso Ristretto</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$4.00</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Concentrated 18g in, 32g out. Rich viscous crema with dark chocolate, dried black cherry, and orange blossom finish.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">PURE EXTRACTION</span>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Aeropress Colombian Pink Bourbon</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$6.50</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Huila anaerobic natural ferment. Distinct tasting notes of passion fruit coulis, guava, and sweet sugarcane sweetness.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-secondary-fixed/50 text-on-secondary-fixed-variant">ROASTER'S PICK</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Category 2: Cold Brew & Signatures -->
+      <div class="menu-content hidden grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 animate-fade-in" id="category-coldbrew">
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">24h Kyoto Drip Cold Brew</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$6.00</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Slow single-drop extraction using iced spring water. Silky wine-like texture with notes of dark plum and cedarwood.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">SLOW CRAFT</span>
+          </div>
+        </div>
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Smoked Tonic &amp; Espresso Spritz</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$7.25</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Artisanal elderflower tonic water, single shot Kenya Nyeri espresso, fresh rosemary sprig, and charred grapefruit peel.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-secondary-fixed/50 text-on-secondary-fixed-variant">SIGNATURE</span>
+          </div>
+        </div>
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Vanilla Bean Nitro Draft</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$6.75</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Nitrogen-infused cold brew steeped with Tahitian whole vanilla beans for a velvety, creamy Guinness-like head.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">CREAM HEAD</span>
+          </div>
+        </div>
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Iced Lavender Cloud Latte</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$6.50</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            House French lavender flower reduction, cold shaken espresso, poured over hand-carved ice with whipped vanilla foam.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-secondary-fixed/50 text-on-secondary-fixed-variant">POPULAR</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3: Artisan Loose-Leaf Teas -->
+      <div class="menu-content hidden grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 animate-fade-in" id="category-tea">
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Ceremonial Uji Matcha Latte</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$7.00</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            First-harvest shade-grown green tea from Kyoto, whisked traditionally with bamboo chasen and folded with warm oat milk.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">JAPANESE IMPORT</span>
+          </div>
+        </div>
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">High Mountain Oolong (Ali Shan)</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$6.25</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Lightly oxidized Taiwanese spring harvest. Creamy orchid florals with sweet buttery notes, served in a ceramic gaiwan.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">MULTI-STEEP</span>
+          </div>
+        </div>
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Silver Needle White Tea (Bai Hao)</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$6.75</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Tender sun-dried Fujian leaf buds. Delicate tasting notes of sweet honeydew, wild clover, and soft morning dew.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-secondary-fixed/50 text-on-secondary-fixed-variant">RARE</span>
+          </div>
+        </div>
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Smoked Chai Masala Pot</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$5.75</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Slow simmered Assam CTC, cracked cinnamon, black pepper, clove, fresh root ginger, and raw dark jaggery.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">HOUSE SPICE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 4: Fresh Bakery & Brunch -->
+      <div class="menu-content hidden grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 animate-fade-in" id="category-bakery">
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Wild Morel &amp; Gruyère Tartine</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$14.50</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Toasted house country sourdough, sautéed wild morel mushrooms, cave-aged Gruyère emulsion, and fresh garden tarragon.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">WARM BRUNCH</span>
+          </div>
+        </div>
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Classic Butter Croissant Pure AOP</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$4.50</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            72-hour sourdough levain, 84% butterfat Normandy butter lamination, ultra-crisp golden shell with airy honeycomb core.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-secondary-fixed/50 text-on-secondary-fixed-variant">BENCHMARK</span>
+          </div>
+        </div>
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Caramelized Cardamom Morning Bun</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$5.25</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Flaky laminated dough knotted with crushed green cardamom sugar, baked until deeply caramelized and golden brown.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">SWEET CRUNCH</span>
+          </div>
+        </div>
+        <div class="border-b border-outline-variant/30 pb-6 space-y-2 hover:bg-surface-container/20 p-3 rounded-lg transition-colors">
+          <div class="flex items-baseline justify-between">
+            <h4 class="font-title-lg text-title-lg text-primary">Heritage Brioche French Toast</h4>
+            <span class="font-title-md text-title-md font-bold text-primary">$13.75</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Custard-soaked thick brioche loaf, roasted fig compote, double vanilla whipped crème fraîche, and dark maple reduction.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold bg-surface-container text-outline">BRUNCH SIGNATURE</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. CAFÉ GALLERY -->
+  <section class="py-20 md:py-28 bg-surface" id="gallery">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-10">
+      
+      <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Visual Ambiance</span>
+        <h2 class="font-headline-lg-mobile md:font-headline-lg text-2xl sm:text-3xl md:text-headline-lg text-primary">
+          Scenes from Beakk and Brew
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          Sun-drenched marble counters, the warmth of the cast-iron roasting drum, and slow mornings shared over steaming porcelain.
+        </p>
+      </div>
+
+      <!-- Editorial Masonry / Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Large Featured Image: 2 cols on md+ -->
+        <div class="md:col-span-2 aspect-[16/10] rounded-2xl md:rounded-3xl overflow-hidden bg-surface-container-high border border-outline-variant/30 relative group shadow-sm">
+          <img 
+            class="w-full h-full object-cover img-zoom" 
+            alt="Expansive coffee bar interior with marble counters and barista brewing pour-over" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDneSbWGVuCOvQH9TPoAJe1ZkvqIINpR6dEP0riq5uiz2zynZrohh2yCXG-Iy6B8z5lFjIP1VOC6Y2L5y1lo_Pm9YjodDVP6udFvCgmqP2r645yv83tXWWgkIyAC_GPFAPu4aShVuhqFtqPK1CtRrES6Xpg5yzvdf_sG6M6WwEQ1ty7jkDDlUta6cEH6XpSc1ZzO-FU4MEI1NUp8rLFyI-F_XBR0i4-ZfTKXQOlGuTHESh1cK96YIDBTQ"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary-container/70 via-transparent to-transparent flex items-end p-6 md:p-8 transition-opacity duration-300">
+            <span class="font-title-lg text-title-lg text-surface font-light tracking-wide drop-shadow-sm">The Marble Extraction Bar</span>
+          </div>
+        </div>
+
+        <!-- Image 2: Roasting -->
+        <div class="aspect-square md:aspect-auto rounded-2xl md:rounded-3xl overflow-hidden bg-surface-container-high border border-outline-variant/30 relative group shadow-sm">
+          <img 
+            class="w-full h-full object-cover img-zoom" 
+            alt="Dark roasted whole coffee beans cascading into burnished copper cooling tray" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrIpjdmClCcx9CMN70MUYdz4ougiRp-nf6f8h-L-sS6obJ576hbekVnF2bedg0grqgDyYwXIXi3RYAI0dV9Z8je9c1a9wpDZAXMjOftucI0THHR-9367rQgMc47XOotmZrU7-aijmKj0gXXGTi5y7HuEtJGfHV5-_YO_XCXdaC20rrIRbMEtwcOZT6EvJ2GO-H0kezXwnb_L5HxxMtGs1EgrugcHZ_VqijrXWU_TpM7OOrtxf2wXMyzg"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary-container/70 via-transparent to-transparent flex items-end p-6 md:p-8 transition-opacity duration-300">
+            <span class="font-title-lg text-title-lg text-surface font-light tracking-wide drop-shadow-sm">Micro-Batch Roasting</span>
+          </div>
+        </div>
+
+        <!-- Image 3: Bakery Counter -->
+        <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden bg-surface-container-high border border-outline-variant/30 relative group shadow-sm">
+          <img 
+            class="w-full h-full object-cover img-zoom" 
+            alt="Bakery counter display with croissants and chocolate babkas" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9MoSjzGwSHslKTMeuHAF959X_1dywm0nwT4AYrY0EaMkqLPdikNypfLLkCcyaRRIzZDXNdNBcwPphxnfkk9O8tO3JCb7hapimXTCHP0SGcnsCT-cFVtUlHWR2lB7LSE5yqDmwITVPjScWNmRm4L1PkeVDtQgTRly4qYneJiHLcpg9M4fu0h1r0ZrdxupxpfYSA6lqMPuOuqNWrSv9EYrHWseCpdxMfa0bI98I9kzpX1T16lkH93IYzA"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary-container/70 via-transparent to-transparent flex items-end p-6 transition-opacity duration-300">
+            <span class="font-title-lg text-title-lg text-surface font-light tracking-wide drop-shadow-sm">7:00 AM Daily Bake</span>
+          </div>
+        </div>
+
+        <!-- Image 4: Latte Art -->
+        <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden bg-surface-container-high border border-outline-variant/30 relative group shadow-sm">
+          <img 
+            class="w-full h-full object-cover img-zoom" 
+            alt="Top down overhead view of rosetta latte art in handcrafted ceramic cup" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN5GJycJlzy089kiYKCTEvG3JLrOCCTf2unKG0aUutXWu8TIw3-v-wBn3aTz_0zD-snpC_q5P9Q3G-bYb5o9347cZnF-vbk4FdvqJd4H9DZDmnsAaOnQnSYr6iiwTUdSCwz6SnnZJLsY9I7ZZhP_m1r6RJK9EFHFx1sK0XjTLiyndce6yi1O-rK-6uWfkm06pC-v4VBjTijvgKmWprifQp_EDzd1QHGnO5U1umTnLGwBlNMAw8dDzJXA"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary-container/70 via-transparent to-transparent flex items-end p-6 transition-opacity duration-300">
+            <span class="font-title-lg text-title-lg text-surface font-light tracking-wide drop-shadow-sm">Latte Art Ritual</span>
+          </div>
+        </div>
+
+        <!-- Image 5: Reading Nook -->
+        <div class="aspect-square rounded-2xl md:rounded-3xl overflow-hidden bg-surface-container-high border border-outline-variant/30 relative group shadow-sm">
+          <img 
+            class="w-full h-full object-cover img-zoom" 
+            alt="Cozy reading nook with plush velvet banquette and botanical sketches" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVKD_wMc0yAiZ464tmXGODiIiXkeXGs3MvZx3oxx9O20yiQvYWnpFoK32Rikk53aYEkhIl191i4Yxy4TQphLRTstnSU5pY1vZ43pxY4Kd7WU8wftPwdj6XTxK5PBJhm0ZFJddI4EFKsO4AEgUEaBW8SNkrBcggsAHrdyDCGXXB0s2J6WUqSr7GvcaN1kty4KFkxyXAe5rxuJyj0IYJtzfKMP_b8ILgOf4Ifn57UKpo7qDYmWaK3ns4qg"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary-container/70 via-transparent to-transparent flex items-end p-6 transition-opacity duration-300">
+            <span class="font-title-lg text-title-lg text-surface font-light tracking-wide drop-shadow-sm">The Velvet Salon</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CUSTOMER REVIEWS -->
+  <section class="py-20 md:py-28 bg-surface-container-high/40 border-t border-outline-variant/30" id="reviews">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-10">
+      
+      <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Testimonials &amp; Honors</span>
+        <h2 class="font-headline-lg-mobile md:font-headline-lg text-2xl sm:text-3xl md:text-headline-lg text-primary">
+          Celebrated by Connoisseurs
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          Words from international culinary critics and neighborhood regulars who make us their daily sanctuary.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1: Michelin Selection -->
+        <div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between premium-card">
+          <div class="space-y-4">
+            <div class="flex items-center gap-1 text-secondary">
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="font-headline-sm text-base sm:text-headline-sm text-primary italic leading-relaxed">
+              "A masterclass in culinary balance. The lamination on their pistachio croissant provides the perfect flaky foil to their clean, floral Ethiopian pour-over."
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-outline-variant/20">
+            <p class="font-title-md text-title-md text-primary font-bold">Michelin Guide Selection</p>
+            <p class="font-body-sm text-body-sm text-outline">Editorial Review • Specialty Café Division</p>
+          </div>
+        </div>
+
+        <!-- Review 2: Epicurean Gazette -->
+        <div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between premium-card">
+          <div class="space-y-4">
+            <div class="flex items-center gap-1 text-secondary">
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-line: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="font-headline-sm text-base sm:text-headline-sm text-primary italic leading-relaxed">
+              "Beakk and Brew treats bean origin with the reverent precision usually reserved for Grand Cru burgundy. Unquestionably one of the finest coffee rituals."
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-outline-variant/20">
+            <p class="font-title-md text-title-md text-primary font-bold">The Epicurean Gazette</p>
+            <p class="font-body-sm text-body-sm text-outline">Chief Food &amp; Beverage Critic</p>
+          </div>
+        </div>
+
+        <!-- Review 3: Daily Patron -->
+        <div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between premium-card">
+          <div class="space-y-4">
+            <div class="flex items-center gap-1 text-secondary">
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="font-headline-sm text-base sm:text-headline-sm text-primary italic leading-relaxed">
+              "My morning haven. The team remembers your preferred extraction profile, the light through the velvet banquettes is sublime, and the babka is life-changing."
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-outline-variant/20">
+            <p class="font-title-md text-title-md text-primary font-bold">Camille Moreau</p>
+            <p class="font-body-sm text-body-sm text-outline">Verified Patron • Member since 2019</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. LOCATION, GOOGLE MAPS & OPENING HOURS -->
+  <section class="py-20 md:py-28 bg-surface" id="visit">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Address & Details Column -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Visit Our Flagship</span>
+            <h2 class="font-headline-lg-mobile md:font-headline-lg text-2xl sm:text-3xl md:text-headline-lg text-primary mt-1">
+              Location &amp; Hours
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+              Located at Bhaktinagar Circle, welcoming coffee connoisseurs and patisserie lovers into an artisan sanctuary.
+            </p>
+          </div>
+
+          <!-- Address Block -->
+          <div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/30 space-y-4 shadow-xs">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-2xl text-primary mt-0.5" data-icon="location_on">location_on</span>
+              <div>
+                <p class="font-title-md text-title-md text-primary font-bold">Flagship Beakk and Brew Roastery</p>
+                <p class="font-body-md text-body-md text-on-surface-variant">Bhaktinagar Circle, Lakshmiwadi, Bhakti Nagar</p>
+                <p class="font-body-sm text-body-sm text-outline">Rajkot, Gujarat 360002</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-outline-variant/20 grid grid-cols-3 gap-2 text-center">
+              <div class="p-2 rounded-lg bg-surface">
+                <span class="material-symbols-outlined text-lg text-outline" data-icon="train">train</span>
+                <p class="font-label-sm text-[11px] text-primary mt-1 font-semibold">Bhakti Nagar Stn</p>
+              </div>
+              <div class="p-2 rounded-lg bg-surface">
+                <span class="material-symbols-outlined text-lg text-outline" data-icon="local_parking">local_parking</span>
+                <p class="font-label-sm text-[11px] text-primary mt-1 font-semibold">Valet Parking</p>
+              </div>
+              <div class="p-2 rounded-lg bg-surface">
+                <span class="material-symbols-outlined text-lg text-outline" data-icon="pedal_bike">pedal_bike</span>
+                <p class="font-label-sm text-[11px] text-primary mt-1 font-semibold">Bike Parking</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Opening Hours Table -->
+          <div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 space-y-3 shadow-xs">
+            <h3 class="font-title-lg text-title-lg text-primary mb-2">Service Hours</h3>
+            <div class="flex justify-between items-center py-2 border-b border-outline-variant/20 font-body-md text-body-md">
+              <span class="text-on-surface">Monday – Friday</span>
+              <span class="font-semibold text-primary">7:00 AM – 7:00 PM</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-outline-variant/20 font-body-md text-body-md">
+              <span class="text-on-surface">Saturday – Sunday</span>
+              <span class="font-semibold text-primary">8:00 AM – 8:00 PM</span>
+            </div>
+            <div class="flex justify-between items-center py-2 text-secondary font-body-md text-body-md">
+              <span>Roastery Tasting Sessions</span>
+              <span class="font-semibold">Thu &amp; Sat at 3:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Google Map Column -->
+        <div class="lg:col-span-7">
+          <div class="w-full aspect-[4/3] min-h-[420px] rounded-2xl md:rounded-3xl overflow-hidden bg-surface-container-high border border-outline-variant/30 relative shadow-md">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.941351117037!2d70.79949067506871!3d22.280211379701075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca72cccb2aa1%3A0x7378b9c1f2d46f4f!2sBhaktinagar%20Circle%2C%20Lakshmiwadi%2C%20Bhakti%20Nagar%2C%20Rajkot%2C%20Gujarat%20360002!5e0!3m2!1sen!2sin!4v1791728361042!5m2!1sen!2sin" 
+              class="w-full h-full min-h-[420px] border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Beakk and Brew Location Map"
+            ></iframe>
+            
+            <!-- Map Card Floating Pin Overlay -->
+            <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-surface/95 backdrop-blur-md p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-outline-variant/40 flex items-center justify-between shadow-lg pointer-events-auto">
+              <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-full bg-primary-container text-surface flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-xl" data-icon="storefront">storefront</span>
+                </span>
+                <div>
+                  <p class="font-title-md text-sm sm:text-title-md text-primary font-bold">Beakk and Brew</p>
+                  <p class="font-body-sm text-xs sm:text-body-sm text-outline">Bhaktinagar Circle, Rajkot • Open until 7:00 PM</p>
+                </div>
+              </div>
+              <a 
+                class="px-4 py-2 rounded-lg bg-surface-container border border-outline-variant/40 text-primary hover:bg-primary-container hover:text-surface transition-all duration-200 font-label-md text-label-md shrink-0 active:scale-95 shadow-xs" 
+                href="https://maps.google.com/?q=Bhaktinagar+Circle,+Lakshmiwadi,+Bhakti+Nagar,+Rajkot,+Gujarat+360002" 
+                rel="noopener noreferrer" 
+                target="_blank"
+              >
+                Directions
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. CONTACT INFORMATION & TABLE RESERVATION CTA -->
+  <section class="py-20 md:py-28 bg-surface-container-low border-t border-outline-variant/30" id="reserve">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Reservation Explainer & Direct Contact Cards -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Reserve Your Moment</span>
+          <h2 class="font-headline-lg-mobile md:font-headline-lg text-2xl sm:text-3xl md:text-headline-lg text-primary">
+            Curated Tables &amp; Private Tastings
+          </h2>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Guarantee your preferred seating for leisurely morning breakfast, pour-over flights, or private cupping sessions. We welcome walk-ins at the bar, while table reservations are held for 15 minutes.
+          </p>
+
+          <div class="space-y-4 pt-4">
+            <a href="tel:+919876543210" class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 hover:border-secondary transition-all duration-200 group shadow-xs">
+              <span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-surface transition-colors">
+                <span class="material-symbols-outlined text-xl" data-icon="call">call</span>
+              </span>
+              <div>
+                <p class="font-label-sm text-[11px] uppercase text-outline font-semibold">Telephone Inquiries</p>
+                <p class="font-title-md text-title-md text-primary font-semibold group-hover:text-secondary transition-colors">+91 (0281) 246 8901</p>
+              </div>
+            </a>
+
+            <a href="mailto:concierge@beakkandbrew.com" class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 hover:border-secondary transition-all duration-200 group shadow-xs">
+              <span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-surface transition-colors">
+                <span class="material-symbols-outlined text-xl" data-icon="mail">mail</span>
+              </span>
+              <div>
+                <p class="font-label-sm text-[11px] uppercase text-outline font-semibold">Private Events &amp; Cupping</p>
+                <p class="font-title-md text-title-md text-primary font-semibold group-hover:text-secondary transition-colors">concierge@beakkandbrew.com</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- High-Conversion Reservation Form Module -->
+        <div class="lg:col-span-7">
+          <div class="bg-surface-container-lowest rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 border border-outline-variant/30 shadow-md">
+            
+            <form class="space-y-6" id="reservation-form" onsubmit="handleReservation(event)">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <!-- Guest Count -->
+                <div class="space-y-2">
+                  <label class="block font-label-md text-label-md uppercase text-outline font-semibold" for="guests">Party Size</label>
+                  <select class="w-full rounded-lg bg-surface border border-outline-variant/40 px-4 py-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary font-body-md transition-colors" id="guests" required="">
+                    <option value="1">1 Guest (Solo Tasting)</option>
+                    <option selected="" value="2">2 Guests (Table)</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6+">6+ Guests (Private Salon)</option>
+                  </select>
+                </div>
+                <!-- Date Picker -->
+                <div class="space-y-2">
+                  <label class="block font-label-md text-label-md uppercase text-outline font-semibold" for="date">Date</label>
+                  <input class="w-full rounded-lg bg-surface border border-outline-variant/40 px-4 py-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary font-body-md transition-colors" id="date" required="" type="date"/>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <!-- Time Slot -->
+                <div class="space-y-2">
+                  <label class="block font-label-md text-label-md uppercase text-outline font-semibold" for="time-slot">Time Experience</label>
+                  <select class="w-full rounded-lg bg-surface border border-outline-variant/40 px-4 py-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary font-body-md transition-colors" id="time-slot" required="">
+                    <option value="Morning Coffee (08:30 AM)">Morning Coffee (08:30 AM)</option>
+                    <option value="Midday Brunch (11:30 AM)">Midday Brunch (11:30 AM)</option>
+                    <option value="Afternoon Tea &amp; Tasting (03:30 PM)">Afternoon Tea &amp; Tasting (03:30 PM)</option>
+                    <option value="Golden Hour Cupping (05:00 PM)">Golden Hour Cupping (05:00 PM)</option>
+                  </select>
+                </div>
+                <!-- Seating Preference -->
+                <div class="space-y-2">
+                  <label class="block font-label-md text-label-md uppercase text-outline font-semibold" for="seating">Seating Section</label>
+                  <select class="w-full rounded-lg bg-surface border border-outline-variant/40 px-4 py-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary font-body-md transition-colors" id="seating" required="">
+                    <option value="Sunlit Terrace">Sunlit Terrace</option>
+                    <option selected="" value="Barista Coffee Bar">Barista Coffee Bar</option>
+                    <option value="Cozy Banquette">Cozy Velvet Banquette</option>
+                    <option value="Roastery Hearth">Roastery Hearth</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Contact Name & Email -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="space-y-2">
+                  <label class="block font-label-md text-label-md uppercase text-outline font-semibold" for="name">Guest Name</label>
+                  <input class="w-full rounded-lg bg-surface border border-outline-variant/40 px-4 py-3 text-on-surface placeholder:text-outline-variant focus:border-primary focus:ring-1 focus:ring-primary font-body-md transition-colors" id="name" placeholder="Aarav Sharma" required="" type="text"/>
+                </div>
+                <div class="space-y-2">
+                  <label class="block font-label-md text-label-md uppercase text-outline font-semibold" for="email">Email Address</label>
+                  <input class="w-full rounded-lg bg-surface border border-outline-variant/40 px-4 py-3 text-on-surface placeholder:text-outline-variant focus:border-primary focus:ring-1 focus:ring-primary font-body-md transition-colors" id="email" placeholder="aarav@domain.com" required="" type="email"/>
+                </div>
+              </div>
+
+              <!-- Special Requests -->
+              <div class="space-y-2">
+                <label class="block font-label-md text-label-md uppercase text-outline font-semibold" for="notes">Special Requests or Dietary Allergies</label>
+                <textarea class="w-full rounded-lg bg-surface border border-outline-variant/40 px-4 py-3 text-on-surface placeholder:text-outline-variant focus:border-primary focus:ring-1 focus:ring-primary font-body-md transition-colors" id="notes" placeholder="e.g. Celebrating an anniversary; gluten sensitivity..." rows="2"></textarea>
+              </div>
+
+              <!-- Submission Button -->
+              <button class="w-full py-4 rounded-lg bg-primary-container text-surface hover:bg-primary transition-all duration-200 font-label-lg text-label-lg shadow-sm hover:shadow-md flex items-center justify-center gap-2 active:scale-[0.99]" type="submit">
+                <span>Confirm Reservation</span>
+                <span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+              </button>
+            </form>
+
+            <!-- Feedback Success Preview Modal state (Hidden initially) -->
+            <div class="hidden text-center py-8 space-y-4 animate-fade-in" id="reservation-success">
+              <div class="w-16 h-16 rounded-full bg-secondary-fixed mx-auto flex items-center justify-center text-on-secondary-fixed shadow-sm">
+                <span class="material-symbols-outlined text-3xl" data-icon="task_alt">task_alt</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-primary">Your Table is Reserved</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto leading-relaxed" id="success-summary">
+                We look forward to welcoming you to Beakk and Brew. A confirmation voucher has been dispatched to your email.
+              </p>
+              <button class="px-6 py-2.5 rounded-lg border border-primary text-primary hover:bg-surface font-label-md text-label-md transition-colors active:scale-95" onclick="resetReservation()">
+                Make Another Booking
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. MINIMAL FOOTER -->
+  <footer class="docked full-width bottom bg-surface-container-high border-t border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-10 py-16 flex flex-col md:flex-row justify-between items-start gap-10">
+      
+      <!-- Brand & Newsletter Column -->
+      <div class="space-y-6 max-w-sm">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-full bg-primary-container text-surface flex items-center justify-center text-xs font-semibold">
+            BB
+          </span>
+          <span class="text-headline-sm font-headline-sm text-primary">
+            Beakk and Brew
+          </span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Receive 15% off your first coffee bag subscription and monthly invitations to private cupping rituals.
+        </p>
+
+        <!-- Newsletter Subscription -->
+        <form class="flex gap-2" onsubmit="handleNewsletter(event)">
+          <input class="flex-1 rounded-lg bg-surface border border-outline-variant/40 px-3.5 py-2 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Your email address" required="" type="email"/>
+          <button class="px-4 py-2 rounded-lg bg-primary-container text-surface hover:bg-primary font-label-sm text-label-sm transition-all duration-200 active:scale-95 shrink-0" type="submit">
+            Subscribe
+          </button>
+        </form>
+        <p class="hidden font-label-sm text-label-sm text-secondary font-semibold" id="newsletter-confirm">Merci! You are now subscribed.</p>
+      </div>
+
+      <!-- Footer Quick Navigation Links -->
+      <div class="space-y-4">
+        <p class="font-title-lg text-title-lg text-primary font-semibold">Navigation</p>
+        <ul class="space-y-2.5 font-label-sm text-label-sm">
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#story">Story</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#story">Artisanal Roastery</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#menu">Menu &amp; Provenance</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#reserve">Private Tasting</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#story">Ethics &amp; Sourcing</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Channels & Community -->
+      <div class="space-y-4">
+        <p class="font-title-lg text-title-lg text-primary font-semibold">Social Journal</p>
+        <div class="flex items-center gap-3">
+          <a aria-label="Instagram" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-surface transition-all duration-200 hover:-translate-y-0.5 active:scale-95" href="#">
+            <span class="material-symbols-outlined text-lg" data-icon="photo_camera">photo_camera</span>
+          </a>
+          <a aria-label="Spotify Roastery Playlist" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-surface transition-all duration-200 hover:-translate-y-0.5 active:scale-95" href="#">
+            <span class="material-symbols-outlined text-lg" data-icon="graphic_eq">graphic_eq</span>
+          </a>
+          <a aria-label="Pinterest Food Moodboard" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-surface transition-all duration-200 hover:-translate-y-0.5 active:scale-95" href="#">
+            <span class="material-symbols-outlined text-lg" data-icon="brush">brush</span>
+          </a>
+          <a aria-label="TikTok Behind The Scenes" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-surface transition-all duration-200 hover:-translate-y-0.5 active:scale-95" href="#">
+            <span class="material-symbols-outlined text-lg" data-icon="videocam">videocam</span>
+          </a>
+        </div>
+        <p class="font-body-sm text-body-sm text-outline pt-2 max-w-xs leading-relaxed">
+          Weekly Spotify playlist: "Morning Mists at Beakk and Brew"
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Legal Bar -->
+    <div class="border-t border-outline-variant/30 py-6">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-10 flex flex-col sm:flex-row justify-between items-center gap-4 text-on-surface-variant font-body-sm text-body-sm">
+        <span>© 2024 Beakk and Brew Roastery &amp; Pâtisserie. All rights reserved.</span>
+        <div class="flex gap-6 font-label-sm text-label-sm">
+          <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+          <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+          <a class="hover:text-primary transition-colors" href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 11. SHOPPING TRAY / CART DRAWER (INTERACTIVE WOW FEATURE) -->
+  <div id="cart-drawer-overlay" class="fixed inset-0 bg-primary/40 backdrop-blur-xs z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="cart-drawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-surface-container-lowest shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between">
+      
+      <!-- Cart Header -->
+      <div class="p-6 border-b border-outline-variant/30 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-2xl text-primary" data-icon="shopping_bag">shopping_bag</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary">Your Tasting Tray</h3>
+        </div>
+        <button id="cart-close-btn" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-surface transition-colors" aria-label="Close Tray">
+          <span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+        </button>
+      </div>
+
+      <!-- Cart Item List -->
+      <div id="cart-items" class="p-6 overflow-y-auto flex-1 space-y-4 custom-scroll">
+        <!-- Sample Item 1 -->
+        <div class="flex items-center justify-between gap-4 p-3 rounded-xl bg-surface-container-low border border-outline-variant/20">
+          <div>
+            <p class="font-title-md text-sm font-semibold text-primary">Ethiopian Yirgacheffe G1 (250g)</p>
+            <p class="font-body-sm text-xs text-outline">Whole bean • Nordic light roast</p>
+            <span class="font-title-md text-sm font-bold text-primary">$18.50</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="w-6 h-6 rounded bg-surface border border-outline-variant/40 flex items-center justify-center text-xs font-bold text-primary hover:bg-primary-container hover:text-surface" onclick="updateTrayQty(this, -1)">-</button>
+            <span class="text-xs font-bold text-primary">1</span>
+            <button class="w-6 h-6 rounded bg-surface border border-outline-variant/40 flex items-center justify-center text-xs font-bold text-primary hover:bg-primary-container hover:text-surface" onclick="updateTrayQty(this, 1)">+</button>
+          </div>
+        </div>
+
+        <!-- Sample Item 2 -->
+        <div class="flex items-center justify-between gap-4 p-3 rounded-xl bg-surface-container-low border border-outline-variant/20">
+          <div>
+            <p class="font-title-md text-sm font-semibold text-primary">Golden Honeycomb Latte</p>
+            <p class="font-body-sm text-xs text-outline">Dine-in • Double ristretto</p>
+            <span class="font-title-md text-sm font-bold text-primary">$6.50</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="w-6 h-6 rounded bg-surface border border-outline-variant/40 flex items-center justify-center text-xs font-bold text-primary hover:bg-primary-container hover:text-surface" onclick="updateTrayQty(this, -1)">-</button>
+            <span class="text-xs font-bold text-primary">1</span>
+            <button class="w-6 h-6 rounded bg-surface border border-outline-variant/40 flex items-center justify-center text-xs font-bold text-primary hover:bg-primary-container hover:text-surface" onclick="updateTrayQty(this, 1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart Footer -->
+      <div class="p-6 border-t border-outline-variant/30 space-y-4 bg-surface-container-low">
+        <div class="flex justify-between items-center text-body-md font-semibold text-primary">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$25.00</span>
+        </div>
+        <p class="text-xs text-outline">Complimentary tasting card and artisan packaging included.</p>
+        <button class="w-full py-3.5 rounded-lg bg-primary-container text-surface hover:bg-primary font-label-lg text-label-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95" onclick="alert('Order placed! Your barista will prepare your selection shortly.')">
+          Proceed to Order ($25.00)
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 12. TOAST NOTIFICATION CONTAINER -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-primary-container text-surface px-5 py-3.5 rounded-xl shadow-xl border border-outline-variant/40 flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <span class="material-symbols-outlined text-secondary-fixed text-xl" data-icon="check_circle">check_circle</span>
+    <span id="toast-message" class="font-label-md text-sm">Item added to your tasting tray</span>
+  </div>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Tab switching logic for categorized menu
+    function switchMenu(category, btnElement) {
+      // Hide all menu category contents
+      document.querySelectorAll('.menu-content').forEach(el => {
+        el.classList.add('hidden');
+        el.classList.remove('animate-fade-in');
+      });
+
+      // Show targeted category
+      const target = document.getElementById('category-' + category);
+      if (target) {
+        target.classList.remove('hidden');
+        // Force reflow for smooth animation replay
+        void target.offsetWidth;
+        target.classList.add('animate-fade-in');
+      }
+
+      // Reset button styles
+      document.querySelectorAll('.menu-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-primary-container', 'text-surface');
+        btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+
+      // Activate clicked button
+      btnElement.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      btnElement.classList.add('bg-primary-container', 'text-surface');
+    }
+
+    // Reservation submission feedback state
+    function handleReservation(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const guests = document.getElementById('guests').value;
+      const slot = document.getElementById('time-slot').value;
+      const seating = document.getElementById('seating').value;
+
+      document.getElementById('reservation-form').classList.add('hidden');
+      const successBox = document.getElementById('reservation-success');
+      successBox.classList.remove('hidden');
+      
+      document.getElementById('success-summary').textContent = 
+        `Thank you, ${name}. Your table for ${guests} guest(s) for ${slot} in the ${seating} has been confirmed.`;
+      
+      showToast(`Reservation confirmed for ${name}!`);
+    }
+
+    function resetReservation() {
+      document.getElementById('reservation-form').reset();
+      document.getElementById('reservation-form').classList.remove('hidden');
+      document.getElementById('reservation-success').classList.add('hidden');
+    }
+
+    // Newsletter feedback
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const form = e.target;
+      form.classList.add('hidden');
+      document.getElementById('newsletter-confirm').classList.remove('hidden');
+      showToast('Merci! You are now subscribed.');
+    }
+
+    // Mobile nav toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileIcon = document.getElementById('mobile-icon');
+
+    if (mobileBtn && mobileNav) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileNav.classList.contains('hidden');
+        if (isHidden) {
+          mobileNav.classList.remove('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'true');
+          if (mobileIcon) mobileIcon.textContent = 'close';
+        } else {
+          mobileNav.classList.add('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+          if (mobileIcon) mobileIcon.textContent = 'menu';
+        }
+      });
+
+      // Close on clicking link
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.add('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+          if (mobileIcon) mobileIcon.textContent = 'menu';
+        });
+      });
+    }
+
+    // Dynamic Navigation Active State & ScrollSpy
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function setActiveNav(targetId) {
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === '#' + targetId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+
+      mobileNavLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === '#' + targetId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+
+    // Link Click Event Handler
+    document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          const sectionId = href.substring(1);
+          setActiveNav(sectionId);
+        }
+      });
+    });
+
+    // IntersectionObserver ScrollSpy
+    const trackedSections = document.querySelectorAll('section[id]');
+    if ('IntersectionObserver' in window && trackedSections.length > 0) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveNav(entry.target.id);
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: 0
+      });
+
+      trackedSections.forEach(section => observer.observe(section));
+    }
+
+    // Cart Drawer Toggle
+    const cartToggleBtn = document.getElementById('cart-toggle-btn');
+    const cartCloseBtn = document.getElementById('cart-close-btn');
+    const cartOverlay = document.getElementById('cart-drawer-overlay');
+    const cartDrawer = document.getElementById('cart-drawer');
+
+    function openCart() {
+      if (cartOverlay && cartDrawer) {
+        cartOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        cartOverlay.classList.add('opacity-100');
+        cartDrawer.classList.remove('translate-x-full');
+      }
+    }
+
+    function closeCart() {
+      if (cartOverlay && cartDrawer) {
+        cartOverlay.classList.remove('opacity-100');
+        cartOverlay.classList.add('opacity-0', 'pointer-events-none');
+        cartDrawer.classList.add('translate-x-full');
+      }
+    }
+
+    if (cartToggleBtn) cartToggleBtn.addEventListener('click', openCart);
+    if (cartCloseBtn) cartCloseBtn.addEventListener('click', closeCart);
+    if (cartOverlay) {
+      cartOverlay.addEventListener('click', (e) => {
+        if (e.target === cartOverlay) closeCart();
+      });
+    }
+
+    // Toast Notification System
+    let toastTimeout;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toast-message');
+      if (!toast) return;
+
+      if (toastMessage) toastMessage.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3500);
+    }
+
+    // Quick Add buttons
+    document.querySelectorAll('.quick-add-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const name = btn.getAttribute('data-name') || 'Item';
+        showToast(`Added ${name} to your tray`);
+        
+        // Add item to cart list visually
+        const cartItems = document.getElementById('cart-items');
+        if (cartItems) {
+          const newItem = document.createElement('div');
+          newItem.className = 'flex items-center justify-between gap-4 p-3 rounded-xl bg-surface-container-low border border-outline-variant/20 animate-fade-in';
+          newItem.innerHTML = `
+            <div>
+              <p class="font-title-md text-sm font-semibold text-primary">${name}</p>
+              <p class="font-body-sm text-xs text-outline">Freshly extracted / baked</p>
+              <span class="font-title-md text-sm font-bold text-primary">$${btn.getAttribute('data-price') || '6.00'}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button class="w-6 h-6 rounded bg-surface border border-outline-variant/40 flex items-center justify-center text-xs font-bold text-primary hover:bg-primary-container hover:text-surface" onclick="updateTrayQty(this, -1)">-</button>
+              <span class="text-xs font-bold text-primary">1</span>
+              <button class="w-6 h-6 rounded bg-surface border border-outline-variant/40 flex items-center justify-center text-xs font-bold text-primary hover:bg-primary-container hover:text-surface" onclick="updateTrayQty(this, 1)">+</button>
+            </div>
+          `;
+          cartItems.appendChild(newItem);
+        }
+      });
+    });
+
+    function updateTrayQty(btn, delta) {
+      const parent = btn.parentElement;
+      const span = parent.querySelector('span');
+      let count = parseInt(span.textContent) + delta;
+      if (count <= 0) {
+        parent.closest('.rounded-xl').remove();
+      } else {
+        span.textContent = count;
+      }
+    }
+
+    // Set default date to tomorrow for date picker
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      dateInput.value = tomorrow.toISOString().split('T')[0];
+    }
+
+    // Sticky nav shadow enhancement on scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      if (header) {
+        if (window.scrollY > 30) {
+          header.classList.add('shadow-sm');
+        } else {
+          header.classList.remove('shadow-sm');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
